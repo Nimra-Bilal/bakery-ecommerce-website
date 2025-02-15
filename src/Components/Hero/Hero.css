@@ -1,0 +1,141 @@
+.hero {
+  height: 100vh; 
+  background: linear-gradient(180deg, #222, #111 60%);
+  display: flex;
+  color: #fff;
+  /* Top margin */
+  margin-bottom: 50px; 
+}
+
+/* Hero Left Section */
+.hero-left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 100px;
+  line-height: 1.1;
+}
+
+.hero-left h2 {
+  color: #ddd;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.hero-left p {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+/* Hand Icon */
+.hero-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-hand-icon img {
+  width: 5px;
+  height:10px; /* Chhoti image */
+}
+
+/* Call-to-Action Button */
+.hero-latest-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 220px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 20px;
+  background: #ff4141;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.hero-latest-btn:hover {
+  background: #ff2222;
+}
+
+/* Hero Right Section */
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-right img {
+  max-width: 60px; /* Image aur chhoti kar di */
+  height: auto;
+  filter: brightness(90%);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-left {
+      padding-left: 50px;
+  }
+
+  .hero-left h2 {
+      font-size: 18px;
+  }
+
+  .hero-left p {
+      font-size: 50px;
+  }
+
+  .hero-hand-icon img {
+      width: 12px; /* Chhoti image */
+  }
+
+  .hero-latest-btn {
+      width: 200px;
+      height: 45px;
+      font-size: 16px;
+  }
+
+  .hero-right img {
+      max-width: 60px; /* Image aur chhoti */
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .hero-left {
+      padding: 40px 20px;
+  }
+
+  .hero-left h2 {
+      font-size: 16px;
+  }
+
+  .hero-left p {
+      font-size: 40px;
+  }
+
+  .hero-hand-icon img {
+      width: 10px; /* Chhoti image */
+  }
+
+  .hero-latest-btn {
+      width: 180px;
+      height: 40px;
+      font-size: 14px;
+  }
+
+  .hero-right img {
+      max-width: 50px; /* Smallest size */
+  }
+}
