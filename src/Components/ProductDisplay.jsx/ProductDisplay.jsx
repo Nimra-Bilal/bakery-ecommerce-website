@@ -1,68 +1,6 @@
-// import React, { useContext } from 'react'
-// import './ProductDisplay.css'
-// import star_icon from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/star_icon.png'
-// import stardull_icon from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/star_dull_icon.png'
-// import { ShopContext } from '../../Context/ShopContext'
-// const ProductDisplay = (props) => {
-//     const {product}=props;
-//     const {addToCart} = useContext(ShopContext);
-//   return (
-//     <div className='productdisplay'>
-//         <div className="productdisplay-left">
-// <div className="productdisplay-imglist">
-//     <img src={product.image} alt="" />
-//     <img src={product.image} alt="" />
-//     <img src={product.image} alt="" />
-//     <img src={product.image} alt="" />
-// </div>
-// <div className="productdisplay-image">
-//     <img className="productdisplay-main-image" src={product.image} alt="" />
-// </div>
-//         </div>
-//         <div className="productdisplay-right">
-// <h1>{product.name}</h1>
-// <div className="productdisplay-right-star">
-//     <img src={star_icon} alt="" />
-//     <img src={star_icon} alt="" />
-//     <img src={star_icon} alt="" />
-//     <img src={star_icon} alt="" />
-//     <img src={stardull_icon} alt="" />
-//     <p>(122)</p>
-// </div>
-// <div className="productdisplay-right-prices">
-//     <div className="productdisplay-right-price-old">
-// ${product.old_price}
-//     </div>
-//     <div className="productdisplay-right-price-new">
-//     ${product.new_price}
-//         </div></div>
-//         <div className="productdisplay-right-description">
-//         The chocolate croissant is a flaky, buttery pastry filled with rich, smooth chocolate, offering a perfect balance of sweetness and texture in every bite.
-//         <div className="productdisplay-right-size">
-//             <h1>SELECT SIZE</h1>
-//             <div className="productdisplay-right-sizes">
-//                 <div>S</div>
-//                 <div>M</div>
-//                 <div>L</div>
-//                 <div>FAMILY ORDER</div>
-//                 <div>MIGHTY ORDER</div>
-//             </div>
-       
-//         <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button> 
-//         <p className="productdisplay-right-category">
-//             <span>Category: </span><span> BUNS , BREAD , SALTED BUTTERED WITH CREAM</span>
-//             <span> Tags:</span><span> Fresh , Hot </span>
-//         </p></div>  </div>
-
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default ProductDisplay
-
 
 import React, { useContext } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './ProductDisplay.css';
 import star_icon from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/star_icon.png';
 import stardull_icon from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/star_dull_icon.png';
@@ -72,59 +10,54 @@ const ProductDisplay = (props) => {
   const { product } = props;
   const { addtocart } = useContext(ShopContext);
 
-  // Check if product is defined and has image property
   if (!product || !product.image) {
-    return <div>Product not found</div>; // Handle missing product or image
+    return <div className="text-center text-light bg-dark py-5">Product not found</div>;
   }
 
   return (
-    <div className='productdisplay'>
-      <div className="productdisplay-left">
-        <div className="productdisplay-imglist">
-          <img src={product.image} alt="product" />
-          <img src={product.image} alt="product" />
-          <img src={product.image} alt="product" />
-          <img src={product.image} alt="product" />
-        </div>
-        <div className="productdisplay-image">
-          <img className="productdisplay-main-image" src={product.image} alt="main product" />
-        </div>
-      </div>
-      <div className="productdisplay-right">
-        <h1>{product.name}</h1>
-        <div className="productdisplay-right-star">
-          <img src={star_icon} alt="star" />
-          <img src={star_icon} alt="star" />
-          <img src={star_icon} alt="star" />
-          <img src={star_icon} alt="star" />
-          <img src={stardull_icon} alt="star" />
-          <p>(122)</p>
-        </div>
-        <div className="productdisplay-right-prices">
-          <div className="productdisplay-right-price-old">
-            ${product.old_price}
+    <div className="container-fluid text-light bg-dark py-5">
+      <div className="row g-4">
+        <div className="col-md-6 d-flex">
+          <div className="d-flex flex-column gap-2 me-3">
+            {[...Array(4)].map((_, index) => (
+              <img key={index} src={product.image} alt="product" className="img-thumbnail" style={{ width: '60px', height: '60px' }} />
+            ))}
           </div>
-          <div className="productdisplay-right-price-new">
-            ${product.new_price}
+          <div className="flex-grow-1 d-flex justify-content-center align-items-center">
+            <img src={product.image} alt="main product" className="img-fluid w-100" />
           </div>
         </div>
-        <div className="productdisplay-right-description">
-          The chocolate croissant is a flaky, buttery pastry filled with rich, smooth chocolate, offering a perfect balance of sweetness and texture in every bite.
-          <div className="productdisplay-right-size">
-            <h1>SELECT SIZE</h1>
-            <div className="productdisplay-right-sizes">
-              <div>S</div>
-              <div>M</div>
-              <div>L</div>
-              <div>FAMILY ORDER</div>
-              <div>MIGHTY ORDER</div>
-            </div>
-            <button onClick={() => { addtocart(product.id) }}>ADD TO CART</button>
-            <p className="productdisplay-right-category">
-              <span>Category: </span><span> BUNS , BREAD , SALTED BUTTERED WITH CREAM</span>
-              <span> Tags:</span><span> Fresh , Hot </span>
-            </p>
+
+        <div className="col-md-6 d-flex flex-column gap-3">
+          <h1 className="fs-3 fw-bold">{product.name}</h1>
+          <div className="d-flex align-items-center gap-2 text-warning">
+            {[...Array(4)].map((_, index) => (
+              <img key={index} src={star_icon} alt="star" width="20" />
+            ))}
+            <img src={stardull_icon} alt="star" width="20" />
+            <p className="mb-0">(122)</p>
           </div>
+
+          <div className="d-flex align-items-center gap-3">
+            <div className="text-decoration-line-through text-secondary">${product.old_price}</div>
+            <div className="text-danger fs-4 fw-bold">${product.new_price}</div>
+          </div>
+
+          <p className="text-secondary">The chocolate croissant is a flaky, buttery pastry filled with rich, smooth chocolate, offering a perfect balance of sweetness and texture in every bite.</p>
+
+          <h2 className="fs-5 fw-semibold mt-3">SELECT SIZE</h2>
+          <div className="d-flex gap-2">
+            {['S', 'M', 'L', 'FAMILY ORDER', 'MIGHTY ORDER'].map((size, index) => (
+              <div key={index} className="btn btn-outline-light py-2 px-3 border border-secondary rounded-2">{size}</div>
+            ))}
+          </div>
+
+          <button onClick={() => addtocart(product.id)} className="btn btn-danger w-100 mt-3">ADD TO CART</button>
+
+          <p className="text-secondary mt-3">
+            <span className="fw-semibold">Category: </span> BUNS, BREAD, SALTED BUTTERED WITH CREAM<br />
+            <span className="fw-semibold">Tags: </span> Fresh, Hot
+          </p>
         </div>
       </div>
     </div>

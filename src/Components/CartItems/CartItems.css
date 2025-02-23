@@ -86,7 +86,7 @@
 
 /* Promo Code Box */
 .cartitems-promobox {
-    width: 504px;
+    width: 300px;
     margin: 15px;
     padding-left: 20px;
     height: 58px;
@@ -101,13 +101,13 @@
     outline: none;
     background: transparent;
     font-size: 16px;
-    width: 330px;
+    width: 130px;
     height: 50px;
     color: #fff;
 }
 
 .cartitems-promobox button {
-    width: 170px;
+    width: 270px;
     height: 58px;
     font-size: 16px;
     background: black;

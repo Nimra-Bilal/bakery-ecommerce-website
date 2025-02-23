@@ -5,6 +5,7 @@
   border-radius: 10px; /* Optional: adds rounded corners */
   padding: 15px; /* Optional: adds padding */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
+  
 }
 
 .item img {

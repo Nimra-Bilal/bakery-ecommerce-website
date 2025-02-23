@@ -5,6 +5,10 @@
   color: #fff;
   /* Top margin */
   margin-bottom: 50px; 
+  font-family: "Dancing Script",serif;
+  font-optical-sizing: auto;
+  font-style: Bold;
+  width:100%;
 }
 
 /* Hero Left Section */
@@ -13,9 +17,9 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
-  padding-left: 100px;
-  line-height: 1.1;
+  gap: 2px;
+  padding-left: 20px;
+  line-height: 1.0;
 }
 
 .hero-left h2 {
@@ -26,20 +30,21 @@
 
 .hero-left p {
   color: #fff;
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 /* Hand Icon */
-.hero-hand-icon {
+.logo-img {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
+
 }
 
-.hero-hand-icon img {
-  width: 5px;
-  height:10px; /* Chhoti image */
+.logo-img img {
+  width: 170px;
+  height:200px; /* Chhoti image */
 }
 
 /* Call-to-Action Button */
@@ -55,7 +60,7 @@
   background: #ff4141;
   color: white;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 900;
   transition: 0.3s;
 }
 
@@ -72,7 +77,7 @@
 }
 
 .hero-right img {
-  max-width: 60px; /* Image aur chhoti kar di */
+  max-width: 50px; /* Image aur chhoti kar di */
   height: auto;
   filter: brightness(90%);
 }

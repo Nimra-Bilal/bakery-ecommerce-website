@@ -7,6 +7,9 @@
     background: #111; /* Dark background */
     padding: 50px 20px;
     color: #fff; /* White text */
+    font-family: "Dancing Script",serif;
+    font-optical-sizing: auto;
+    font-style: Bold;
 }
 .footer-logo img {
     width: 120px; /* Adjust this value to make the logo smaller */
@@ -41,7 +44,7 @@
 }
 
 .footer-links li:hover {
-    color: #ff4141;
+    color: #ff4141 !important;
 }
 
 /* Social Icons */
