@@ -1,15 +1,15 @@
 import React from 'react'
 import './Footer.css'
-import footer_logo from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/logo_big.png'
+import footer_logo from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/hero_image.png'
 import instagram_icon from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/instagram_icon.png'
 import pinterester_icon from  '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/pintester_icon.png'
 import whatsapp_icon from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/whatsapp_icon.png'
 const Footer = () => {
   return (
     <div className='footer'>
-        <div className="footer-logo">
-            <img src={footer_logo} alt="" />
-            <p>BELLA'S BAKESTRY</p>
+        <div className="footer-logo img-fluid rounded-circle">
+            <img className="img-fluid rounded-circle" src={footer_logo} alt="" />
+            <p>Food Campus</p>
             </div>
 <ul className='footer-links'>
     <li>COMPANY</li>

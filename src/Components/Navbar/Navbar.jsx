@@ -312,7 +312,7 @@
 import React, { useContext, useRef, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
-import logo from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/hand_icon.png';
+import logo from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/hero_image.png';
 import cart_icon from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/cart_icon.png';
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';

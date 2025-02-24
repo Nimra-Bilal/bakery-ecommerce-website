@@ -31,7 +31,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Hero.css';
-import logo from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/hand_icon.png';
+import logo from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/hero_image.png';
 import arrow_icon from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/arrow.png';
 import hero_image from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/hero_image.png';
 
@@ -41,7 +41,7 @@ const Hero = () => {
       <div className='hero-left text-center text-md-start px-5'>
         <h2 className='fs-4 fw-semibold'>FRESH PRODUCTS ONLY</h2>
         <div className='d-flex align-items-center justify-content-center justify-content-md-start my-3'>
-          <img src={logo} alt='logo' className='img-fluid rounded-circle' style={{ width: '150px', height: '150px' }} />
+          <img src={logo} alt='logo' className='img-fluid rounded-circle' style={{ width: '150px', height: '100px' }} />
           <p className='fs-2 fw-bold mb-0 ms-3'>yummiest delicasies for everyone!</p>
         </div>
         <div className='hero-latest-btn d-inline-flex align-items-center justify-content-center gap-2 bg-danger text-white rounded-pill px-4 py-2 fw-bold mt-3'>
