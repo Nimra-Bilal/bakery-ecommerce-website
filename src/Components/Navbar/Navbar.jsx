@@ -312,7 +312,7 @@
 import React, { useContext, useRef, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
-import logo from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/logo.png';
+import logo from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/hand_icon.png';
 import cart_icon from '../Assets/Frontend_Assets-20250118T130924Z-001/Frontend_Assets/cart_icon.png';
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
@@ -336,8 +336,8 @@ export const Navbar = ({ navbarButton, setNavbarButton }) => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light py-3">
             <div className="container-fluid">
                 <Link className="navbar-brand d-flex align-items-center" to="/">
-                    <img src={logo} alt="Logo" width="60" height="60" />
-                    <span className="ms-2 fs-3 fw-bold">BELLA'S BAKESTRY</span>
+                    <img src={logo} className="img-fluid rounded-circle" alt="Logo" width="90" height="90" />
+                    <span className="ms-2 fs-3 fw-bold">Food Campus</span>
                 </Link>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
