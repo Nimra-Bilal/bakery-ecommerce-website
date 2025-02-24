@@ -27,11 +27,13 @@
 }
 
 .shopcategory-products {
-    margin: 20px 70px 30px 30px;
+    margin: 20px auto 30px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; /* Correct syntax */
     row-gap: 80px;
     column-gap: 20px; /* Fixed typo: colum-gap -> column-gap */
+    margin-left: 0 !important;  /* Ensure no left margin */
+    padding-left: 0 !important;
 }
 
 .shopcategory-loadmore {

@@ -76,9 +76,11 @@ const ShopCategory = (props) => {
         </div>
       </div>
 
-      <div className='shopcategory-products container text-center'>
+      <div className='shopcategory-products text-center' style={{ paddingLeft: '0', paddingRight: '0' }}>
+
         {all_product && all_product.length > 0 ? (
-          <div className=' shopcategory-products row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 '>
+         <div className='shopcategory-products row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-0 align-content-center'>
+
             {all_product.map((item, i) => (
               props.category === item.category && (
                 <div key={i} className='col'>
