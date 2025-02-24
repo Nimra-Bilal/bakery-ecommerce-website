@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
       </div>
       <div className='hero-right text-center mt-4 mt-md-0'>
-        <img src={hero_image} alt='hero_image' className='img-fluid' style={{ maxWidth: '950px', height: '100vh' }} />
+        <img src={hero_image} alt='hero_image' className='img-fluid' style={{ maxWidth: '1000px', height: '100vh' }} />
       </div>
     </div>
   );
